@@ -1,0 +1,2 @@
+class LifeWheelsController < ApplicationController
+end

@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: one
+  life_wheel: one
+  score: 1
+  comment: MyString
+
+two:
+  category: two
+  life_wheel: two
+  score: 1
+  comment: MyString

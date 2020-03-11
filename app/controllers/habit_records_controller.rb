@@ -1,0 +1,2 @@
+class HabitRecordsController < ApplicationController
+end

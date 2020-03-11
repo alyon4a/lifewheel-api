@@ -1,0 +1,2 @@
+class CategoryScoresController < ApplicationController
+end
