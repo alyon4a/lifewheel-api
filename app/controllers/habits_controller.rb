@@ -1,7 +1,8 @@
 class HabitsController < ApplicationController
 
     def index
-        habits = Habit.all
+        user = User.find(params['user_id'])
+        habits = user ? user.habits : [] 
         render json: habits, except: [:created_at, :updated_at]
     end
 end

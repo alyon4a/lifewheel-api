@@ -6,14 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Habit.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('habits')
 HabitRecord.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('habit_records')
-Category.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('categories')
+Habit.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('habits')
 CategoryScore.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('category_scores')
+Category.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('categories')
+
 LifeWheel.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('life_wheels')
 MoodRecord.destroy_all
@@ -27,8 +28,10 @@ users = User.create([{email: 'alona@alona.com', name: 'Alona', password: '123'},
                     {email: 'calvin@calvin.com', name: 'Calvin', password: '123'},
                    ])
 
-habits = Habit.create([{name: 'hydrate', user: users[0], start_date: Date.new(2020, 2, 3), end_date: Date.new(2020, 4, 7)},
-                       {name: 'jumping jacks', user: users[0], start_date: Date.new(2020, 3, 2), end_date: Date.new(2020, 7, 4)} 
+habits = Habit.create([{name: 'Hydrate', user: users[0], start_date: Date.new(2020, 2, 3), end_date: Date.new(2020, 4, 7)},
+                       {name: 'Jumping jacks', user: users[0], start_date: Date.new(2020, 3, 2), end_date: Date.new(2020, 7, 4)},
+                       {name: 'Read', user: users[0], start_date: Date.new(2020, 3, 2), end_date: Date.new(2020, 7, 4)},
+                       {name: 'Meditate', user: users[0], start_date: Date.new(2020, 3, 2), end_date: Date.new(2020, 7, 4)}
                       ])
 
 habit_records = HabitRecord.create([{habit: habits[0], yes_date: Date.new(2020, 3, 12)},
